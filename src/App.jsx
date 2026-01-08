@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import LockScreen from './components/LockScreen'
 import Dashboard from './components/Dashboard'
+import { Analytics } from '@vercel/analytics/react'
 
 export default function App() {
   const [unlocked, setUnlocked] = useState(false)
@@ -19,7 +20,13 @@ export default function App() {
 
   return (
     <div>
-      {unlocked ? <Dashboard password={password} onLock={handleLock} /> : <LockScreen onUnlock={handleUnlock} />}
+      {unlocked ? (
+        <Dashboard password={password} onLock={handleLock} />
+      ) : (
+        <LockScreen onUnlock={handleUnlock} />
+      )}
+
+      <Analytics /> {/* Vercel Analytics Component */}
     </div>
   )
 }

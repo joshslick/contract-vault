@@ -6,7 +6,7 @@ import { CATEGORIES, CATEGORY_CONTRACT_FIELDS } from '../constants/contractSchem
 
 import AddContractCard from './dashboard/AddContractCard';
 import ContractsCard from './dashboard/ContractCard';
-import useBackupFlow from '../hooks/useBackupFlow';
+import useBackupFlow from '../hooks/UseBackupFlow';
 
 export default function Dashboard({ password, onLock }) {
   const { records, isLoading, loadRecords, addRecord, deleteRecord } = useRecords(password);

@@ -4,3 +4,5 @@
 export { useAuth } from './useAuth';
 export { useRecords } from './useRecords';
 export { useToast } from './useToast';
+export { useNotifications } from './useNotifications';
+

@@ -5,13 +5,13 @@ export default function HowItWorks({ open, onToggle }) {
     <>
       <div className="info-toggle" style={{ marginBottom: 12 }}>
         <button type="button" className="btn" onClick={onToggle}>
-          {open ? 'Hide Info ▲' : 'How Contract Vault Works ▼'}
+          {open ? 'Hide Info ▲' : 'How Contract Lock Works ▼'}
         </button>
       </div>
 
       {open && (
         <div className="info-card">
-          <h3>How Contract Vault Works</h3>
+          <h3>How Contract Lock Works</h3>
 
           <h4>🔐 Security & Storage</h4>
           <ul>

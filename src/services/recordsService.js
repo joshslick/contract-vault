@@ -1,4 +1,5 @@
 import store from '../storage/contractsStore';
+import crypto from '../storage/crypto';
 
 function chunk(arr, size) {
   const out = [];
@@ -38,7 +39,7 @@ class RecordsService {
   async updateRecord(id, contractObj, password) {
     // Keep same id by overwriting the record instead of delete+new id
     const plaintext = JSON.stringify(contractObj);
-    const envelope = await store.cryptoEncryptForUpdate(plaintext, password); // <-- see note below
+    const envelope = await crypto.encrypt(plaintext, password);
     await store.saveEncryptedRecord(id, envelope);
     return id;
   }

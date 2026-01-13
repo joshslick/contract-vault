@@ -66,9 +66,9 @@ export default function LockScreen({ onUnlock }) {
   return (
     <div className="lock-wrapper">
       <div className="lock-card">
-        <h2 style={{ marginTop: 20 }}>Welcome to Contract Vault</h2>
+        <h2 style={{ marginTop: 20 }}>Welcome to Contract Lock</h2>
         <p style={{ marginTop: 8, marginBottom: 8, fontSize: 13, color: '#d1d5db' }}>
-          Contract Vault is a local-first, encrypted dashboard for all your contracts,
+          Contract Lock is a local-first, encrypted dashboard for all your contracts,
           subscriptions, bills, and important accounts — kept securely on your device,
           not in the cloud.
         </p>
